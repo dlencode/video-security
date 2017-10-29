@@ -1,0 +1,21 @@
+include _mixins
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" type="text/javascript")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" type="text/javascript")
+    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.0/parsley.js" type="text/javascript")
+    block title
+
+    include _styles
+
+  body
+    block content
+
+  include _scripts-footer
+  //- script(src="js/loader-min.js" type="text/javascript")

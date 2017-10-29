@@ -1,0 +1,62 @@
+mixin ready-to-use(id, title, cams, registrator, cabelAndPower, memory, install, warranty, additional, price)
+  .col-xs-offset-1.col-sm-offset-0.col-xs-10.col-sm-6.col-md-3(id="ready-to-use__item--" + id)
+    .ready-to-use__item
+      .ready-to-use__item--image
+      .ready-to-use__item--top
+        .ready-to-use__item--top__title "#{title}"
+      .ready-to-use__item--list
+        .ready-to-use__item--list__subtext Количество камер
+        .ready-to-use__item--list__text= cams
+      .ready-to-use__item--list
+        .ready-to-use__item--list__subtext Регистратор
+        .ready-to-use__item--list__text= registrator
+      .ready-to-use__item--list
+        .ready-to-use__item--list__subtext Кабель и питание
+        .ready-to-use__item--list__text= cabelAndPower
+      .ready-to-use__item--list
+        .ready-to-use__item--list__subtext Память
+        .ready-to-use__item--list__text= memory
+      .ready-to-use__item--list
+        .ready-to-use__item--list__subtext Монтаж
+        .ready-to-use__item--list__text= install
+      .ready-to-use__item--list
+        .ready-to-use__item--list__subtext Гарантия
+        .ready-to-use__item--list__text= warranty
+      .ready-to-use__item--list
+        .ready-to-use__item--list__text= additional
+      .ready-to-use__item--list
+        .ready-to-use__item--list__price #{price} руб.
+      .ready-to-use__item--list
+        .ready-to-use__item--list__learn-more Узнать больше
+      .ready-to-use__item--button
+        button.button.button__normal Заказать консультацию
+
+
+
+mixin service(pathToImage, title, subtitle)
+  .col-xs-offset-1.col-sm-offset-0.col-xs-10.col-sm-6.col-md-3
+    .service__item(style="background-image:url(" + pathToImage + ")")
+      .service__item--title= title
+      .service__item--subtitle= subtitle
+
+
+mixin review(author, text)
+  .col-xs-offset-1.col-xs-10.col-sm-offset-0.col-sm-6.col-md-4
+    .review__item
+      .review__item--author= author
+      .review__item--text= text
+
+
+
+
+
+mixin gallery
+  .my-gallery(itemscope='', itemtype='http://schema.org/ImageGallery')
+    if block
+      block
+
+mixin galleryItem(linkToImage, linkToThumb, imageDesc, imageCapt)
+  figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+    a(href=linkToImage, itemprop='contentUrl', data-size='1024x683')
+      img(src=linkToThumb, itemprop='thumbnail', alt=imageDesc)
+    figcaption(itemprop='caption description')= imageCapt

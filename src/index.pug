@@ -1,0 +1,244 @@
+extends parts/_page
+include parts/_mixins
+
+block title
+  title Видеомастер
+
+block content
+    nav.nav
+      .container
+        .row
+          .nav__content
+            .nav__content--left
+              a(href="#home").logotype
+            .nav__content--right
+              a(href="#ready-to-use") Готовые решения
+              a(href="#advantages") Преимущества
+              a(href="#services") Наши услуги
+              a(href="#reviews") Отзывы
+    section.section__welcome.section__alt#home
+      .container
+        h1 Видеонаблюдение в Ставрополе
+        h3 Выезд бесплатный, гарантия 3 года. Скидки до 15%
+        a(href="#ready-to-use") Узнать больше о готовых решениях систем видеонаблюдения
+
+    .container
+      .row.center-xs
+        form.contact-form.contact-form--welcome#form-1(method="POST")
+          .contact-form--welcome__content
+            .container
+              .contact-form__content--header
+                h3 Оставьте заявку и наш менеджер свяжется с Вами
+              .contact-form__content--inputs
+                .row.center-xs
+                  input(type="text" placeholder="Имя" name="name").contact-form__content--inputs__item.col-xs-offset-1.col-xs-10.col-md-3
+                  input(type="text" placeholder="Телефон" name="phone").contact-form__content--inputs__item.col-xs-offset-1.col-xs-10.col-md-3
+                  input(type="submit" value="Отправить").button.button__normal.contact-form__content--inputs__item.col-xs-offset-1.col-xs-10.col-md-3
+
+    section.section__ready-to-use#ready-to-use
+      .container
+        h2.page__header Готовые решения системы видеонаблюдения в Ставрополе и крае
+        .row
+          +ready-to-use(1, 'Домашний', '4 уличных TVI камеры 1mpx', '4 канальный с возможностью доступа через мобильные устройства 1шт. Качество записи – HD', 'Кабель – 120 метров. Блок питания – 12В 5А. Switch – остутствует', 'Жесткий диск на 1TB', 'Отдельно', '3 года', 'Возможно изменить комплекты от 9000 рублей', 21410)
+          +ready-to-use(2, 'Домашний IP 8', '8 уличных IP камеры 1.3mpx IP', '8 канальный с возможностью доступа через мобильные устройства 1шт. Качество записи – HD', 'Кабель – 120 метров. Блок питания – 12В 5A x 2шт. Switch – 16 портовый', 'Жесткий диск на 1TB', 'Отдельно', '3 года', 'При заказе через сайт 65250 рублей', 72500)
+          +ready-to-use(3, 'Бизнес', '4 купольных TVI камеры 1 mpx', '4 канальный с возможностью доступа через мобильные устройства 1шт. Качество записи – HD', 'Кабель – 120 метров. Блок питания – 12В 5A. Switch – остутствует', 'Жесткий диск на 1TB', 'Отдельно', '3 года', '', 18740)
+          +ready-to-use(4, 'Бизнес IP', '8 IP камер 1mpx', '4 канальный с возможностью доступа через мобильные устройства 1шт. Качество записи – HD', 'Кабель – 120 метров. Блок питания – 12В 5A x 2шт. Switch – 16 портовый', 'Жесткий диск на 1TB', 'Отдельно', '3 года', 'При заказе через сайт 63000 рублей', 70000)
+        
+        .section__ready-to-use--other
+          h3 По другим продуктам и готовым решениям обращайтесь по телефону
+          span Готовые решения от 9000 рублей
+
+    // Редактирование модальных окон
+    // Модальное окно для готового решения №1
+    section.section__modal--ready-to-use-info.section__modal--ready-to-use-info__1
+      .section__modal--ready-to-use-info__overlay
+      .container
+        h3.modal__subheader Готовое решение
+        h2.modal__header "Домашний"
+        .section__modal--ready-to-use-info__content
+          .section__modal--ready-to-use-info__close
+            i.fa.fa-times(aria-hidden='true')
+          p Этот комплект будет оптимальным решением для частного дома или дачи, преимущества видеонаблюдения «в коробке» очевидны:
+          p - полная комплектация
+          p - 100% совместимость
+          p - готовые настройки
+          p - простота работы с комплектом
+          p - весь охранный комплекс у Вас в телефоне 
+          p - при приобретении комплекта - скидка 10 %
+          +gallery
+            +galleryItem('https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg', 'https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg', 'Testing', 'Testing caption')
+            +galleryItem('https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg', 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg')
+            +galleryItem('https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg', 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg')
+            +galleryItem('https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg', 'https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg')
+    // Модальное окно для готового решения №2
+    section.section__modal--ready-to-use-info.section__modal--ready-to-use-info__2
+      .section__modal--ready-to-use-info__overlay
+      .container
+        h3.modal__subheader Готовое решение
+        h2.modal__header "Домашний IP 8"
+        .section__modal--ready-to-use-info__content
+          .section__modal--ready-to-use-info__close
+            i.fa.fa-times(aria-hidden='true')
+          p Этот комплект будет оптимальным решением для частного дома или дачи, преимущества видеонаблюдения «в коробке» очевидны:
+          p - полная комплектация
+          p - 100% совместимость
+          p - готовые настройки
+          p - простота работы с комплектом
+          p - весь охранный комплекс у Вас в телефоне 
+          p - при приобретении комплекта - скидка 10 %
+          +gallery
+            +galleryItem('https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg', 'https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg', 'Testing', 'Testing caption')
+            +galleryItem('https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg', 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg')
+            +galleryItem('https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg', 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg')
+    // Модальное окно для готового решения №3
+    section.section__modal--ready-to-use-info.section__modal--ready-to-use-info__3
+      .section__modal--ready-to-use-info__overlay
+      .container
+        h3.modal__subheader Готовое решение
+        h2.modal__header "Бизнес"
+        .section__modal--ready-to-use-info__content
+          .section__modal--ready-to-use-info__close
+            i.fa.fa-times(aria-hidden='true')
+          p Этот комплект будет оптимальным решением для частного дома или дачи, преимущества видеонаблюдения «в коробке» очевидны:
+          p - полная комплектация
+          p - 100% совместимость
+          p - готовые настройки
+          p - простота работы с комплектом
+          p - весь охранный комплекс у Вас в телефоне 
+          p - при приобретении комплекта - скидка 10 %
+          +gallery
+            +galleryItem('https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg', 'https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg', 'Testing', 'Testing caption')
+            +galleryItem('https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg', 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg')
+            +galleryItem('https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg', 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg')
+    // Модальное окно для готового решения №4
+    section.section__modal--ready-to-use-info.section__modal--ready-to-use-info__4
+      .section__modal--ready-to-use-info__overlay
+      .container
+        h3.modal__subheader Готовое решение
+        h2.modal__header "Бизнес IP"
+        .section__modal--ready-to-use-info__content
+          .section__modal--ready-to-use-info__close
+            i.fa.fa-times(aria-hidden='true')
+          p Этот комплект будет оптимальным решением для частного дома или дачи, преимущества видеонаблюдения «в коробке» очевидны:
+          p - полная комплектация
+          p - 100% совместимость
+          p - готовые настройки
+          p - простота работы с комплектом
+          p - весь охранный комплекс у Вас в телефоне 
+          p - при приобретении комплекта - скидка 10 %
+          +gallery
+            +galleryItem('https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg', 'https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg', 'Testing', 'Testing caption')
+            +galleryItem('https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg', 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg')
+            +galleryItem('https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg', 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg')
+
+
+    // Root element of PhotoSwipe. Must have class pswp.
+    .pswp(tabindex='-1', role='dialog', aria-hidden='true')
+      //
+        Background of PhotoSwipe.
+        It's a separate element, as animating opacity is faster than rgba().
+      .pswp__bg
+      // Slides wrapper with overflow:hidden.
+      .pswp__scroll-wrap
+        // Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory.
+        // don't modify these 3 pswp__item elements, data is added later on.
+        .pswp__container
+          .pswp__item
+          .pswp__item
+          .pswp__item
+        // Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed.
+        .pswp__ui.pswp__ui--hidden
+          .pswp__top-bar
+            // Controls are self-explanatory. Order can be changed.
+            .pswp__counter
+            button.pswp__button.pswp__button--close(title='Закрыть (Esc)')
+            button.pswp__button.pswp__button--share(title='Поделиться')
+            button.pswp__button.pswp__button--fs(title='Перейти в полноэкранный режим')
+            button.pswp__button.pswp__button--zoom(title='Увеличить/Уменьшить')
+            // Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR
+            // element will get class pswp__preloader--active when preloader is running
+            .pswp__preloader
+              .pswp__preloader__icn
+                .pswp__preloader__cut
+                  .pswp__preloader__donut
+          .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+            .pswp__share-tooltip
+          button.pswp__button.pswp__button--arrow--left(title='Previous (arrow left)')
+          button.pswp__button.pswp__button--arrow--right(title='Next (arrow right)')
+          .pswp__caption
+            .pswp__caption__center
+
+    section.section__advantages#advantages
+      .container
+        h2.page__header Преимущества работы с нами
+        .section__advantages--content
+          p Мы продаем Вам не просто оборудование, мы предлагаем конкретные решения по Вашему запросу 
+          p Мы придерживаемся правила – быстро, качественно, удобно
+          p Выезд на замер – БЕСПЛАТНО!
+          p Индивидуальный подход к каждому клиенту
+          .contact-form__content--header
+            h3 Оставьте заявку и наш менеджер свяжется с Вами
+          form.contact-form__content--inputs#form-2(method="POST")
+            .row.center-xs.start-sm
+              input(type="text" placeholder="Имя" name="name").contact-form__content--inputs__item.col-xs-offset-1.col-xs-10.col-md-3
+              input(type="text" placeholder="Телефон" name="phone").contact-form__content--inputs__item.col-xs-offset-1.col-xs-10.col-md-3
+              input(type="submit" value="Отправить").button.button__normal.contact-form__content--inputs__item.col-xs-offset-1.col-xs-10.col-md-3
+
+    section.section__divider
+      h3 Наша компания разработает индивидуальное решение и произведет замер БЕСПЛАТНО
+      h2 ГАРАНТИЯ НА ОБОРУДОВАНИЕ 3 ГОДА
+
+    section.section__service#services
+      .container
+        h2.page__header Наши услуги
+        .page__subheader Системы видеонаблюдения
+        .row
+          +service('img/services-setup.jpg', 'Монтаж', 'Систем охранного видеонаблюдения')
+          +service('img/services-intercoms.jpg', 'Установка', 'Видеодомофонов')
+          +service('img/services-maintenance.jpg', 'Обслуживание', 'Систем СКУД, Видеонаблюдения в Ставрополе')
+          +service('img/services-engineering.jpg', 'Проектирование ', 'Систем СКУД и видеонаблюдения любой сложности')
+
+    section.section__form
+      .contact-form.contact-form--separator
+        .contact-form--separator__content
+            .contact-form__content--header
+              h3 Оставьте заявку и наш менеджер свяжется с Вами
+            form.contact-form__content--inputs#form-3(method="POST")
+              .container
+                .row.center-xs
+                  input(type="text" placeholder="Имя" name="name").contact-form__content--inputs__item.col-xs-offset-1.col-xs-10.col-md-3
+                  input(type="text" placeholder="Телефон" name="phone").contact-form__content--inputs__item.col-xs-offset-1.col-xs-10.col-md-3
+                  input(type="submit" value="Отправить").button.button__alt.contact-form__content--inputs__item.col-xs-offset-1.col-xs-10.col-md-3
+
+    section.section__reviews#reviews
+      .container
+        h2.page__header Отзывы клиентов
+        .row
+          +review('Вася Пупкин', 'Совсем небольшой отзыв, который должен умещаться в три строки, не в две, а ровно в три, для упрощения верстки')
+          +review('Вася Пупкин', 'Совсем небольшой отзыв, который должен умещаться в три строки, не в две, а ровно в три, для упрощения верстки')
+          +review('Вася Пупкин', 'Совсем небольшой отзыв, который должен умещаться в три строки, не в две, а ровно в три, для упрощения верстки')
+          +review('Вася Пупкин', 'Совсем небольшой отзыв, который должен умещаться в три строки, не в две, а ровно в три, для упрощения верстки')
+          +review('Вася Пупкин', 'Совсем небольшой отзыв, который должен умещаться в три строки, не в две, а ровно в три, для упрощения верстки')
+          +review('Вася Пупкин', 'Совсем небольшой отзыв, который должен умещаться в три строки, не в две, а ровно в три, для упрощения верстки')
+    
+    footer.footer
+      .container
+        .row
+          .col-xs-12.col-md-4
+            a(href="#home").logotype
+          .col-xs-12.col-md-4.socials
+            .footer__socials
+              a(href="#").socials__vk
+                i.fa.fa-vk(aria-hidden="true")
+              a(href="#").socials__instagram
+                i.fa.fa-instagram(aria-hidden="true")
+              a(href="#").socials__facebook
+                i.fa.fa-facebook(aria-hidden="true")
+              a(href="#").socials__telegram
+                i.fa.fa-paper-plane(aria-hidden="true")
+          .col-xs-12.col-md-4.footer__contacts
+            p Телефон: 89990000000
+            p Адрес: г. Ставрополь, ул. Ленина, 00
+            p Электронная почта: mail@mail.com
+            p ИНН: 0000000000000000
+            p ОГРНИП: 0000000000000000
