@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25900",
 "files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/Company files\/Logotype – V1.jpg": {
 		"ft": 16384,
 		"iS": 35552,
@@ -263,6 +269,24 @@
 		"oAP": "\/dist\/send.php",
 		"oF": 0
 		},
+	"\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 1,
+		"oAP": "\/README.html",
+		"oF": 1,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"\/src\/index.pug": {
 		"cOD": 1,
 		"ft": 512,
@@ -341,7 +365,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 528458054,
-	"displayValue": "Security",
+	"displayValue": "video-security",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ron"
 	},
